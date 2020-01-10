@@ -1,4 +1,4 @@
-Creating a new date object
+Creating a new date object 
 
   new Date() 
     // creates a new date object with the current date and time
