@@ -1,4 +1,4 @@
-Arrays
+Arrays 
 
     sort() 
         // Sorts an array alphabetically
