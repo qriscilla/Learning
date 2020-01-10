@@ -47,8 +47,22 @@ Conditional Statements
     // block of code to be executed if condition 1 is false and condition 2 is false
   }
 
-  // Note that these words (if, else, switch) are lowercase!
-  if // useed to specify a block of code to be executed, if a specified condition is true
-  else // used to specify a block of code to be executed, if the same condition is false
-  else if // used to specify a new condition to test, if the first condition is false
-  switch // used to specify many alternative blocks of code to be executed
+  switch (expressions) { // used to specify many alternative blocks of code to be executed
+     case x:
+        // code block
+        break; // stops the execution of inside the block
+     case y:
+        // code block
+        break;
+      default: // code to run if there is no case-match
+        // code block
+   } 
+
+   // More notes on switch
+      // Default doesn't need to exist
+      // Default doesn't need to be the last case, but if it's not the last, it needs a break!
+      // If multiple cases match, the first case is selected.
+      // If no matching cases are found and there is no default, it will continue to the statement(s) after the switch.
+      // Switch cases use strict comparisons (===), so both type and value need to match.
+
+
