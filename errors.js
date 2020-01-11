@@ -35,3 +35,10 @@ function myFunction() {
         alert(err.name); // use this in catch
 
     message // sets or returns an error message (a string)
+    
+code debugging 
+    // searching for and fixing errors in programming code
+
+    console.log()
+    set breakpoints
+    debugger // stops the execution and calls (if available) the debugging function
