@@ -3,6 +3,7 @@
 Naming    
     // names should start with a letter
     // never start with a $ sign
+    // try not to use these words https://www.w3schools.com/js/js_reserved.asp
     // generally use camelCase for variables and functions
     // UPPERCASE for global variables and constants
     // don't use hyphens - in JS; can be mistaken as subtraction 
@@ -39,5 +40,35 @@ Object
     // end with semicolon ;
     // short objects can be written on one line
 
-// avoid lines longer than 80 characters
-// break it after an operator or a comma
+Length
+    // avoid lines longer than 80 characters
+    // break it after an operator or a comma
+
+Avoid
+    // new, ==, eval(), with
+    // global variables if you can
+
+// Use {} instead of new Object()
+    var x1 = {};
+
+// Use "" instead of new String()
+    var x2 = "";
+
+// Use [] instead of new Array()
+    var x3 = [];
+
+// Use function (){} instead of new Function()
+    var x7 = function(){};
+
+Write shorter loops
+    // Instead of
+        var i;
+        for (i = 0; i < arr.length; i++) {}
+    // Do
+        var i;
+        var 1 = arr.length;
+        for (i = 0; i < 1; i++) {}
+
+Reduce DOM access and size
+
+// To see common mistakes, refer to https://www.w3schools.com/js/js_mistakes.asp
