@@ -39,3 +39,5 @@ this
         alert(this); // error
         }
         myFunction();
+
+    // See this.js for more notes on the "this" keyword. 
