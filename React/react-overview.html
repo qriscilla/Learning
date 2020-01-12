@@ -1,0 +1,40 @@
+About React
+  - a JS library created by Facebook
+  - often called a framework because of its behavior and capabilities
+  - is the view in MVC (Model-view-controller)
+  - used for building UIs and front-end apps
+  
+Works in components
+  - e.g., In a to do list app, it would have multiple components:
+    search enginer component, list of tasks component, each task component, add to do component
+  - Components can have state, which is an object that determines how that component renders and behaves
+  - Can have "application level" state by using a state manager (e.g., Redux or Reacts own context API)
+  
+Create React App
+  - a command line (CLI) tool for creating React apps
+  - uses Webpack, but needs no additional configuration
+  - comes bundled with a dev server with hot reload (i.e., auto-reload as you save)
+  - "npm run build" to compile all your code to something that the browser can read
+  
+Anotmy of a component
+  - Class-based components can have life-cycle methods
+  E.g.,
+  <script>
+  Class Post extends React.Component { // Class called post that extends the component class in React library
+    state = { // Creating a state object with different key value pairs
+    title: "Post One",
+    body: "This is my post"
+    }
+    render() { // the only required life-cycle method that takes care of rendering components on the page
+    return {
+    <div> // JSX (JavaScript XML) starts here. Kind of looks like HTML!
+      <h3>{ this.state.title }</h3> // JS expressions embedded directly in the markup
+      <p>{ this.state.body }</p>
+    </div>
+    }
+    }
+  }
+  </script>
+  
+Resources:
+  https://www.youtube.com/watch?v=sBws8MSXN7A
