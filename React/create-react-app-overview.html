@@ -1,0 +1,80 @@
+package.json
+  - a manifest file with info about our app
+  - Packages react and react-dom are needed to make web apps
+  - can use react-native to make mobile apps
+  - react-scripts is for dev servers, compiling apps, running tests, and etc.
+  - start script for starting the dev server
+  - build script for compiling our code before deploying
+  
+public folder
+
+  index.html
+    - Remember, React is a single-page application framework; everything runs through one single page, which is index.html!
+    - Everything outputs in <div id="root></div>
+    - Bootstrap and Font Awesome go here
+
+src folder
+
+  index.js
+    - the "entry point" to React
+    - document.getElementById('root') here is grabbing <div id="root></div> from index.html
+    - <App /> here is referring to App.js
+    - use serviceWorker for Progressive Web App
+    
+  App.js
+    - rend() is a method (the only lifecycle method that's required)
+    - return ( everything inside the parantheses is JSX )
+    - can write JS inside {curly braces}
+    - canNOT use class attricute in JSX. use className instead
+    - to change from the default function to class, use:
+    
+      import React, {Component} from 'react';
+      import logo from './logo.svg';
+      import './App.css';
+
+      class App extends Component {
+        render() {
+          return (
+            <div className="App">
+              <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>
+                  Edit <code>src/App.js</code> and save to reload.
+                </p>
+                <a
+                  className="App-link"
+                  href="https://reactjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Learn React
+                </a>
+              </header>
+            </div>
+          );
+        }
+      }
+      export default App;
+      
+Traversy Media's basic "clean-up"
+  1. Delete index.css
+  2. Go to index.js and delete import './index.css';
+  3. Delete logo.svg
+  4. Go to app.js and delete import logo from './logo.svg';
+  4. In app.js delete and delete
+                                  <header className="App-header">
+                                    <img src={logo} className="App-logo" alt="logo" />
+                                    <p>
+                                      Hello World
+                                    </p>
+                                    <a
+                                      className="App-link"
+                                      href="https://reactjs.org"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                    >
+                                      Learn React
+                                    </a>
+                                  </header>
+  5. Tweak app.css as needed
+  
