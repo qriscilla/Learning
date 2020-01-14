@@ -1,0 +1,30 @@
+How JSX works
+  - stands for JavaScript XML
+  - allows us to write HTML in JavaScript and place them in the DOM
+  - converts HTML tags into react elements
+  - is an extension of the JavaScript language based on ES6
+  - is translated into regular JavaScript at runtime
+  
+How to write JSX
+  - write the expression inside {curly braces}
+  - expression can be a React variable, or property, or any other valid JavaScript expression
+  - Elements must be closed with />
+  - To write HTML on multiple lines, put the HTML inside parentheses
+    E.g.,
+        const myelement = (
+          <ul>
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Cherries</li>
+          </ul>
+        );
+        
+One Top Level Element
+  -  Have two headers? Must put them inside a parent element, like a div element
+    E.g.,
+        const myelement = (
+          <div>
+            <h1>I am a Header.</h1>
+            <h1>I am a Header too.</h1>
+          </div>
+        );
