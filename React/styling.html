@@ -1,0 +1,53 @@
+In general, when styling,
+  - no hyphen! use camel case e.g., backgroundColor, not background-color
+
+When doing inline-styling,
+  e.g., <script>
+        export class TodoItem extends Component {
+            render() {
+                return (
+                    <div style={{backgroundColor:'#f4f4f4'}}>
+                        <p>{ this.props.todo.title }</p>
+                    </div>
+                )
+            }
+        }
+        </script>
+    
+When doing style via variable,
+  e.g., <script>
+        export class TodoItem extends Component {
+            render() {
+                return (
+                    <div style={itemStyle}>
+                        <p>{ this.props.todo.title }</p>
+                    </div>
+                )
+            }
+        }
+        const itemStyle = {
+          backgroundColor: '#f4f4f4'
+        }
+        </script>
+    
+Can style via function
+  e.g., <script>
+        export class TodoItem extends Component {
+            getStyle = () => {
+                return {
+                    background: '#f4f4f4',
+                    padding: '10px',
+                    borderBottom: '1px #ccc dotted',
+                    textDecoration: this.props.todo.completed ? 
+                    'line-through' : 'none'
+                }
+            }
+            render() {
+                return (
+                    <div style={this.getStyle()}>
+                        <p>{ this.props.todo.title }</p>
+                    </div>
+                )
+            }
+        }
+        </script>
