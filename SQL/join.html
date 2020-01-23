@@ -1,0 +1,64 @@
+JOIN overview
+  - used to combine rows from two or more tables, based on a related column between them
+  - think of it as two tables "joining" where they repeat the same column
+  
+(INNER) JOIN
+  - returns records that have matching values in both tables
+  
+  SELECT column 
+  FROM table1 
+  INNER JOIN table2 
+  ON table1.column = table2.column;
+  
+  e.g., all orders with customer information
+        SELECT Orders.OrderID, Customer.CustomerName 
+        FROM Orders 
+        INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+        
+  e.g., all orders with customer and shipper information between three tables
+        SELECT Orders.OrderID, Customer.CustomerName, Shipper.ShipperName 
+        FROM ((Orders
+        INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+        INNER join shippers ON Orders.ShipperID = Shippers.ShipperID);
+  
+LEFT (OUTER) JOIN
+  - returns all records from the left table, and the matched records from the right table
+  - If there is no match, the result will be NULL
+  
+  SELECT column
+  FROM table1
+  LEFT JOIN table2
+  ON table1.column = table2.column;
+  
+RIGHT (OUTER) JOIN
+  - returns all records from the right table, and the matched records from the left table
+  
+  SELECT column
+  FROM table1
+  RIGHT JOIN table2
+  ON table1.column = table2.column;
+  
+FULL (OUTER) JOIN
+  - returns all records when there is a match in either left or right table
+  - can potentially return ver large result-sets!
+  - FULL OUTER JOIN is the same as FULL JOIN
+  
+  SELECT column
+  FROM table1
+  FULL OUTER JOIN table2
+  ON table1.column = table2.column
+  WHERE condition;
+  
+SELF JOIN
+  - a regular join, but the table is joined withi itself
+  
+  SELECT column
+  FROM table1 T1, table1 T2 // T1 and T2 are different table aliases for the same table
+  WHERE condition;
+  
+  e.g., matches customers that are from the same city
+        SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+        FROM Customer A, Customer B
+        WHERE A.CustomerID <> B.CustomerID
+        AND A.City = B.City
+        ORDER BY A.City;
