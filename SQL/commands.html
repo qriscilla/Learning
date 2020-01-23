@@ -61,7 +61,17 @@ WHERE
   - used to filter records and extract only those records that fulfill a specified condition
   - e.g., SELECT column1 FROM table_name WHERE condition;
           UPDATE column1 FROM table_name WHERE condition;
-                              
+
+HAVING
+  - used because WHERE can't be used with aggregate functions
+                                                   
+  SELECT column
+  FROM table
+  WHERE condition
+  GROUP BY column
+  HAVING condition
+  ORDER BY column;
+            
 ORDER BY
   - used to sort the result-set in ascending (ASC) or descending (DESC) order
   - is ascending by default
@@ -69,7 +79,17 @@ ORDER BY
           SELECT column FROM table_name ORDER BY column DESC;
     e.g., SELECT * FROM customers ORDER BY Country, CustomerName; // order by Country and then the same Country rows by CustomerName
     e.g., SELECT * FROM customers ORDER BY Country ASC, CustomerName DESC;
-                
+
+GROUP BY
+  - gruops rows that have the same values into summary rows
+  - often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) to group the result-set by one or more columns
+      
+  SELECT column
+  FROM table_name
+  WHERE condition
+  GROUP BY column
+  ORDER BY column; 
+            
 NULL
   - field with no value
   - different from zero or spaces! just left blank during record creation (whether it's on purpose or not)
