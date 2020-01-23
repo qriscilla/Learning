@@ -1,0 +1,22 @@
+Aliases
+  - used to give a table or a column a temporary name
+  - used to make column names more readable
+  - only exists for the duration of that query
+  - use double quotation marks or square brackets if the alias name contains spaces!
+  
+Alias Column Syntax
+
+  SELECT column AS alias_name FROM table_name;
+  
+  e.g., SELECT CustomerID AS ID, CustomerName AS Customer FROM Customers;
+  
+  e.g., SELECT CustomerName AS Customer, ContactName AS [Contact Person] FROM Customers;
+  
+  e.g., SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address FROM Customers;
+
+Alias Table Syntax
+
+  SELECT column FROM table_name AS alias_name;
+  
+  e.g., all orders from the customer with CustomerID=4 (Around the Horn) using "Customers" and "Orders" tables and giving them the table aliases "c" and "o" respectively
+        SELECT o.OrderID, o.OrderDate, c.CustomerName FROM Customer AS c, Orders AS o WHERE c.CustomerName="Around the Horn" AND c.CustomerID=o.CustomerID;
