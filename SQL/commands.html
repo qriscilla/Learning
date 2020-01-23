@@ -17,6 +17,21 @@ SELECT TOP
   - top percent
     e.g., SELECT TOP 50 PERCENT * FROM Customers;
 
+SELECT INTO
+  - copies data from one table into a new table
+
+  e.g., copy all columns into a new table
+        SELECT *
+        INTO newtable [IN externaldatabase]
+        FROM oldtable
+        WHERE condition;
+                                                   
+  e.g., copy only some columns into a new table
+        SELECT column1, column2, column3
+        INTO newtable [IN externaldatabase]
+        FROM oldtable
+        WHERE condition;
+                                                   
 UPDATE
   - updates existing data in a database
   - use SET
