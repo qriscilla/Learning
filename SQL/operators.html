@@ -1,13 +1,27 @@
-Operators used with WHERE
-      =         Equal
-      >         Greater than
-      <         Less than
-      >=        Greater than or equal
-      <=        Less then or equal
-      <>        Not equal (or !=)
-      BETWEEN   Between a certain range
-      LIKE      Search for a pattern
-      IN        To specify multiple possible values for a column
+Operators used w  ith WHERE
+      =           Equal
+      >           Greater than
+      <           Less than
+      >=          Greater than or equal
+      <=          Less then or equal
+      <>          Not equal (or !=)
+      BETWEEN     Between a certain range
+      IN          To specify multiple possible values for a column
+            
+      LIKE        Search for a pattern
+            
+                  % for zero, one, or multiple characters
+                  _ for a single character
+            
+                  LIKE 'a%'         any values that start with 'a'
+                  LIKE '%a'         any values that end with 'a'
+                  LIKE '%or%'       any values that have 'or' in any position
+                  LIKE '_r%'        any values that have 'r' in the second position
+                  LIKE 'a_%'        any values that start with 'a' and are at least 3 characters in length
+                  LIKE 'a%o'        any values that start with 'a' and ends with 'o'
+                                    
+                  e.g., SELECT * FROM Customers WHERE CustomerName LIKE 'a%';
+                        SELECT * FROM Customers WHERE City NOT  LIKE 'a%'; // all records where the City value does not start with 'a'
 
 Other Operators
       AND       displays a record if ALL the conditions separated by AND are true
