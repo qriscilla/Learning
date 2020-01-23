@@ -1,45 +1,79 @@
-Operators used w  ith WHERE
-      =           Equal
-      >           Greater than
-      <           Less than
-      >=          Greater than or equal
-      <=          Less then or equal
-      <>          Not equal (or !=)
+=           Equal
+>           Greater than
+<           Less than
+>=          Greater than or equal
+<=          Less then or equal
+<>          Not equal (or !=)
             
-      BETWEEN     Between a certain range
-                  values can be numbers, text, or dates
-                  is inclusive; begin and end values are included
+BETWEEN     Between a certain range
+            values can be numbers, text, or dates
+            is inclusive; begin and end values are included
             
-                  SELECT column FROM table WHERE column BETWEEN value1 AND value2;
+            SELECT column FROM table WHERE column BETWEEN value1 AND value2;
             
-                  e.g., all products wih a price between 10 and 20
-                        SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
+            e.g., all products wih a price between 10 and 20
+                  SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
             
-                  use with IN to specify even further
-                  e.g., SELECT * FROM Products WHERE Price BETWEEN 10 AND 20 AND NOT CategoryID IN (1,2,3);
+            use with IN to specify even further
+            e.g., SELECT * FROM Products WHERE Price BETWEEN 10 AND 20 AND NOT CategoryID IN (1,2,3);
             
-                  e.g., products with a ProductName BETWEEN Carnarvon Tigers and Mozzarella di Giovanni (alphabetically)
-                        SELECT * FROM Products WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'MOZZARELLA di Giovanni' ORDER BY ProductName;
+            e.g., products with a ProductName BETWEEN Carnarvon Tigers and Mozzarella di Giovanni (alphabetically)
+                  SELECT * FROM Products WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'MOZZARELLA di Giovanni' ORDER BY ProductName;
             
-                  between two dates (remember, inclusive!)
-                  e.g., SELECT * FROM Orders WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';
+            between two dates (remember, inclusive!)
+            e.g., SELECT * FROM Orders WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';
             
-      IN          To specify multiple possible values for a column 
-                  Is a shorthand for multiple OR conditions
+IN          To specify multiple possible values for a column 
+            Is a shorthand for multiple OR conditions
             
-                  e.g., SELECT column FROM table WHERE column IN (value1, value2);
+            e.g., SELECT column FROM table WHERE column IN (value1, value2);
             
-                  e.g., all customers from the same countries as the suppliers
-                        SELECT * FROM Customers WHERE Country IN (SELECT Country FROM Suppliers);
+            e.g., all customers from the same countries as the suppliers
+                  SELECT * FROM Customers WHERE Country IN (SELECT Country FROM Suppliers);
             
-      LIKE        Search for a pattern
-                  (See notes on wildcards for more details)
+LIKE        Search for a pattern
+            (See notes on wildcards for more details)
 
-Other Operators
-      AND       displays a record if ALL the conditions separated by AND are true
-      OR        displays a record if ANY of the conditions separated by OR is true
-      NOT       displays a record if the condition(s) is not true
-                e.g., SELECT column1 FROM table_name WHERE NOT condition;
+AND         displays a record if ALL the conditions separated by AND are true
+      
+OR          displays a record if ANY of the conditions separated by OR is true
+      
+NOT         displays a record if the condition(s) is not true
+            e.g., SELECT column1 FROM table_name WHERE NOT condition;
+      
+UNION       used to combine the result-set of two or more SELECT statements
+            Each statement must have the smae number of columns
+            Columns must have similar data types
+            Columns must be in the same order
+      
+            SELECT column FROM table1
+            UNION
+            SELECT column FROM table2;
+      
+            UNION selects only distince values by default.
+            use UNION ALL to allow duplicate values
+      
+            e.g., cities (only distinct ones) from Customers and Suppliers table
+                  SELECT City FROM Customers
+                  UNION
+                  SELECT City FROM Suppliers
+                  ORDER BY City;
+      
+            e.g., cities (including duplicates) from Customers and Suppliers table
+                  SELECT City FROM Customers
+                  UNION ALL
+                  SELECT City FROM Supliers
+                  ORDER BY City;
+      
+GROUP BY
+            gruops rows that have the same values into summary rows
+            often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) to group the result-set by one or more columns
+      
+            SELECT column
+            FROM table_name
+            WHERE condition
+            GROUP BY column
+            ORDER BY column;
 
 When combining operators, make sure to use parantheses with complex expressions.
   e.g., SELECT * FROM table_name WHERE condition1 AND (condition2 OR condition3);
