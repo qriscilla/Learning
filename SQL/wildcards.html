@@ -1,0 +1,28 @@
+What is a wildcard character?
+  - used to substitute one or more characters in a string
+  - are used with LIKE operator, which is also used with a WHERE clause
+  - don't have just stick with one; can use a combination of multiple!
+
+In MS Access,
+      *     zero or more characters
+      ?     a single character
+      []    any single character within the brackets
+      !     any character not in the brackets
+      -     a range of characters
+      #     any single numeric character
+      
+In SQL Server,
+      %     zero or more characters
+      _     a single character
+      []    any single character within the brackets
+      ^     any character not in the brackets
+      -     a range of characters
+
+e.g., all customers with a City starting with any character followed by "ondon"
+  SELECT * FROM Customers WHERE City LIKE '_ondon';
+
+e.g., all customers with a City starting with "b", "s", or "p"
+  SELECT * FROM Customers WHERE City LIKE '[bsp]%';
+
+e..g, all customers with a City NOT starting with "b", "s", or "p"
+  SELECT * FROM Customers WHERE City LIKE '[^bsp]%';
