@@ -65,5 +65,32 @@ UNION       used to combine the result-set of two or more SELECT statements
                   SELECT City FROM Supliers
                   ORDER BY City;
 
+EXISTS
+            used to test existence of any record in a subquery
+            returns true if the subquery returns one or more records
+            
+            SELECT column
+            FROM table
+            WHERE EXISTS
+            (SELECT column FROM table WHERE condition);
+
+ANY         used with WHERE and HAVING clause
+            returns true if any of the subquery values meet the conditions
+            operator must be a standard comparison operator (=, <>, !=, > >=, <, or <=)
+            
+            SELECT column
+            FROM table
+            WHERE column operator ANY
+            (SELECT column FROM table WHERE condition);
+            
+ALL         used with WHERE and HAVING clause
+            returns true if all of the subquery values meet the conditions
+            operator must be a standard comparison operator (=, <>, !=, > >=, <, or <=)
+            
+            SELECT column
+            FROM table
+            WHERE column operator ALL
+            (SELECT column FROM table WHERE condition);
+            
 When combining operators, make sure to use parantheses with complex expressions.
   e.g., SELECT * FROM table_name WHERE condition1 AND (condition2 OR condition3);
