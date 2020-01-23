@@ -5,8 +5,32 @@ Operators used w  ith WHERE
       >=          Greater than or equal
       <=          Less then or equal
       <>          Not equal (or !=)
+            
       BETWEEN     Between a certain range
-      IN          To specify multiple possible values for a column
+                  values can be numbers, text, or dates
+                  is inclusive; begin and end values are included
+            
+                  SELECT column FROM table WHERE column BETWEEN value1 AND value2;
+            
+                  e.g., all products wih a price between 10 and 20
+                        SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
+            
+                  use with IN to specify even further
+                  e.g., SELECT * FROM Products WHERE Price BETWEEN 10 AND 20 AND NOT CategoryID IN (1,2,3);
+            
+                  e.g., products with a ProductName BETWEEN Carnarvon Tigers and Mozzarella di Giovanni (alphabetically)
+                        SELECT * FROM Products WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'MOZZARELLA di Giovanni' ORDER BY ProductName;
+            
+                  between two dates (remember, inclusive!)
+                  e.g., SELECT * FROM Orders WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';
+            
+      IN          To specify multiple possible values for a column 
+                  Is a shorthand for multiple OR conditions
+            
+                  e.g., SELECT column FROM table WHERE column IN (value1, value2);
+            
+                  e.g., all customers from the same countries as the suppliers
+                        SELECT * FROM Customers WHERE Country IN (SELECT Country FROM Suppliers);
             
       LIKE        Search for a pattern
                   (See notes on wildcards for more details)
