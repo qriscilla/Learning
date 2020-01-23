@@ -1,0 +1,19 @@
+Operators used with WHERE
+      =         Equal
+      >         Greater than
+      <         Less than
+      >=        Greater than or equal
+      <=        Less then or equal
+      <>        Not equal (or !=)
+      BETWEEN   Between a certain range
+      LIKE      Search for a pattern
+      IN        To specify multiple possible values for a column
+
+Other Operators
+      AND       displays a record if ALL the conditions separated by AND are true
+      OR        displays a record if ANY of the conditions separated by OR is true
+      NOT       displays a record if the condition(s) is not true
+                e.g., SELECT column1 FROM table_name WHERE NOT condition;
+
+When combining operators, make sure to use parantheses with complex expressions.
+  e.g., SELECT * FROM table_name WHERE condition1 AND (condition2 OR condition3);
