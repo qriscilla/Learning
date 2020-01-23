@@ -64,16 +64,6 @@ UNION       used to combine the result-set of two or more SELECT statements
                   UNION ALL
                   SELECT City FROM Supliers
                   ORDER BY City;
-      
-GROUP BY
-            gruops rows that have the same values into summary rows
-            often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) to group the result-set by one or more columns
-      
-            SELECT column
-            FROM table_name
-            WHERE condition
-            GROUP BY column
-            ORDER BY column;
 
 When combining operators, make sure to use parantheses with complex expressions.
   e.g., SELECT * FROM table_name WHERE condition1 AND (condition2 OR condition3);
