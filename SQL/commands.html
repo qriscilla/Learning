@@ -67,6 +67,34 @@ CREATE DATABASE
 CREATE TABLE
   - creates a new table
 
+CREATE PROCEDURE
+  - create a procedure to reuse a code without typing it all out over and over again
+
+  CREATE PROCEDURE procedure_name
+  AS
+  sql_statement
+  GO;
+
+  EXEC procedure_name;
+            
+  - use PROCEDURE with parameter(s)
+            
+  one parameter
+      CREATE PROCEDURE SelectAllCustomer @City nvarchar(3)
+      AS
+      SELECT * FROM Customers WHERE City = @City
+      Go;
+
+      EXEC SelectAllCustomers @City = 'London';
+            
+  multiple parameters
+      CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10)
+      AS
+      SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode
+      GO;
+
+      EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';
+            
 ALTER DATABASE
   - modifies a database
   
