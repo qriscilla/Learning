@@ -47,9 +47,19 @@ DELETE
 
 INSERT INTO
   - inserts new data into a database
+  - existing records in the target table are unaffected
+                                                   
+  INSERT INTO table2
+  SELECT * FROM table1
+  WHERE condition;                                                                       
+                                                   
   2 ways:
-    1. Specify both column names and values inserted e.g., INSERT INTO table_name (column1, column2, column3) VALUES (value1, value2, value3);
-    2. Only specify value names if they're being inserted into all columns e.g., INSERT INTO table_name VALUES (value1, value2, value3);
+    1. Specify both column names and values inserted 
+        e.g., INSERT INTO table_name (column1, column2, column3) 
+              VALUES (value1, value2, value3);
+    2. Only specify value names if they're being inserted into all columns 
+        e.g., INSERT INTO table_name 
+              VALUES (value1, value2, value3);
 
 CREATE DATABASE
   - creates a new database
@@ -111,3 +121,16 @@ NULL
   - can't test for NULL values with comparison operators (=, <, <>)
   - use IS NULL and IS NOT NULL operators to test for NULL values
     e.g., SELECT column FROM table WHERE column IS NULL;
+
+CASE
+  - goes through conditions and returns a value when the first condition is met (like an IF-THEN-ELSE statement).
+  - if a condition is true, it'll stop reading and return the result
+  - if no condition is true, it'll return the value in the ELSE clause
+  - if there's no ELSE part and no conditions are true, it'll return NULL
+
+  CASE
+    WHEN condition 1 THEN result1
+    WHEN condition 2 THEN result2
+    WHEN condition N THEN resultN
+    ELSE result
+  END;
