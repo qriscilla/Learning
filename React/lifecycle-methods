@@ -1,0 +1,8 @@
+componentDidMount()
+  - "Mounting"
+  - runs after the component output has been rendered to the DOM
+  
+componentWillMount()
+  - "Unmounting"
+  - deprecated in 2018, so not the best practice to use this
+    use UNSAFE_componentWillMount() instead
