@@ -3,7 +3,7 @@
 */ Objective: Write a function that will accept two integers, number and power, as inputs */
 */ and comput and return a number raised the nth power. All this without any built-in Math functions! */
 
-For-Loop Method
+*/ For-Loop Method */
 
   function numberToPower(number, power) {     /* a function called numberToPower that takes in two parameters, number and power */
     let total = 1;                            /* let total equal to 1 to help us multiply the number parameter by itself */
@@ -13,7 +13,7 @@ For-Loop Method
     return total;
   }
 
-While-Loop Method
+*/ While-Loop Method */
 
   function numberToPower(number, power) {     /* a function called numberToPower that takes in two parameters, number and power */
     let total = 1;                            /* let total equal to 1 to help us multiply the number parameter by itself */
