@@ -11,7 +11,7 @@ function findDigits(n) {                          /* a function called findDigit
     let num = digitArray[i] * 1;                  /* convert characters within the digitArray (that are currently strings) by multiplying them each by 1 */
     
     if(n % num == 0) {                            /* if n divided by each digit has no remaind (is a divisor) */
-      divisors.push(num)                          /* put that digit (num) into the divisors array
+      divisors.push(num)                          /* put that digit (num) into the divisors array */
     }
     
   }
