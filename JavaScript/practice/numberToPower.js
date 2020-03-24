@@ -1,7 +1,7 @@
-Source: https://medium.com/javascript-in-plain-english/javascript-algorithm-power-2cbedf59f40c
+*/ Source: https://medium.com/javascript-in-plain-english/javascript-algorithm-power-2cbedf59f40c
 
-Objective: Write a function that will accept two integers, number and power, as inputs 
-and comput and return a number raised the nth power. All this without any built-in Math functions!
+*/ Objective: Write a function that will accept two integers, number and power, as inputs 
+*/ and comput and return a number raised the nth power. All this without any built-in Math functions!
 
 For-Loop Method
 
