@@ -1,0 +1,35 @@
+Comparison Operators
+
+                  For example, asssume x = 5
+  Operator      Name                          Example       Result
+  >             Greater than                  x > 10        false
+  >=            Greater than or equal to      x >= 5        true
+  <             Less than                     x < -50       false
+  <=            Less than or equal to         x <= 100      true
+  
+  ==            Equal to                      x == "5"      true        x is a number 5, but it equals the value of string 5
+  !=            Not equal to                  x != "b"      true
+  
+  ===           Equal value and type          x === "5"     false
+  !==           Not equal value or type       x !== "5"     true
+  
+  A note about == vs. ===
+    == performs type coercion (converts the values being compared into a similar type, to make them comparable)
+    === does not perform type coercion
+
+    Examples:     var x = 99;                   
+                  x == "99"           true            
+                  x === "99"          false           
+
+                  var y = null
+                  y == undefined      true
+                  y === undefined     false
+
+                  true == "1"         true
+                  true == "12"        false
+
+                  0 == false          true
+
+                  null == undefined   true
+
+                  NaN == NaN          false     Not-a-number is not comparable to a not-a-number
