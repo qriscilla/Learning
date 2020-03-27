@@ -1,18 +1,37 @@
 alert()
   - Pops up and "alerts" the user
   - Examples:
-      alert("Hello, user!")       Hello, user!
-      alert(2 * 5)                10
+      <script>  alert("Hello, user!")   </script>        Hello, user!
+      <script>  alert(2 * 5)            </script>        10
 
 prompt()
   - Allows us to get input from user
   - Basically an alert() with an input textbox
   - Examples:
-      var userName = prompt("What is your name?")        *User answers Priscilla*
-      userName                                           "Priscilla"
+      <script>  var userName = prompt("What is your name?")   </script>       *User answers Priscilla*
+      <script>  userName                                      </script>       "Priscilla"
 
 console.log()
   - Prints in the JS console
   - Examples:
-      console.log("Hello in the console!")        Hello in the console!
-      console.log(10/2)                           5
+      <script> console.log("Hello in the console!")   </script>        Hello in the console!
+      <script> console.log(10/2)                      </script>        5
+
+
+
+
+
+JS Stalker Exercise:
+  1. Ask for the user's first name
+  2. Ask for the user's last name
+  3. Ask for the user's age
+  4. Print out the user's full name in a sentence
+  5. Print out the user's age in a sentence
+
+  <script>
+    var firstName = prompt("What is your first name?");
+    var lastName = prompt("What is your last name?");
+    var age = prompt("How old are you?");
+    console.log("Your full name is " + firstName + " " + lastName + ".");
+    console.log(firstName + "is" + age + " years old.");
+  </script>
