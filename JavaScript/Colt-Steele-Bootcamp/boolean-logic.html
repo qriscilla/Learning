@@ -33,3 +33,46 @@ Comparison Operators
                   null == undefined   true
 
                   NaN == NaN          false     Not-a-number is not comparable to a not-a-number
+
+3 Logical Operators
+
+                                  For example, asssume x = 5 and y = 9
+
+  Operator          Name          Definition                            Example                 Result
+  &&                AND           requires both sides to be true        X < 10 && x !== 5       false
+                                                                        true   && false
+                                                                              
+  ||                OR            only one needs to be true             y > 9 || x === 5        true
+                                                                        false || true
+    
+  !                 NOT           negates or flips the former value     !(x === y)              true
+                                                                        !(false)
+
+Truthy vs. Falsy
+    false, 0, " ", null, undefined, NaN are inherently false in JS.
+    Everything else is true!
+    Check if a value is truthy or falsy, but printing !!value
+    
+  Exercises:
+    
+    1.  var x = 10;              y === "b" || x  >= 10
+        var y = "a";           "a" === "b" || 10 >= 10
+                                  false    ||  true
+                                          true
+    
+    2.  var x = 3;              !(x == "3" || x === y) && !(y != 8 && x <= y)
+        var y = 8;              !(3 == "3" || 3 === 8) && !(8 != 8 && 3 <= 8)
+                                !(true     || false  ) && !(false  && true  )
+                                               !(true) && !(false)
+                                                 false && true
+                                                      false
+    
+    3.  false  &&  false
+              false
+    
+    4.  var str = ""              !( (str || msg) && isFunny )
+        var msg = "haha!"         !( (false || true) && true )
+        var isFunny = "false"     !( (true) && true )
+                                  !(true)
+                                  false
+    
