@@ -2,6 +2,8 @@ Functions are the most important aspect of JS!
 
 
 
+
+
 Functions Overview
   - Lets us wrap bits of code up into reusable packages
 
@@ -17,6 +19,8 @@ Functions Overview
                 doSomething(); // The parantheses here are important to actually execute the function!
                 doSomething;   // Without the parantheses, the console would just recall the function structure.
     </script>
+
+
 
 
 
@@ -48,3 +52,59 @@ Arguments
                                                       hi Ron
                                                       hi undefined
     </script>
+
+
+
+
+
+
+
+      Console.log                 vs.                 Return
+Doesn't capture output                          Captures an output 
+Only prints in console                          Prints and saves output
+
+Examples:
+        <script>
+
+          // Use return keyword to output a value from a function
+          function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+          }
+          var city = "paris";                 // "paris"
+          var capital = capitalize(city);     // "Paris" Without the return keyword in the function, this would go back to "paris" when called in future
+
+
+          // Use return keyword to stop execution of a function
+          function capitalize(str) {
+            if(typeof str === "number") {
+              return "That's not a string!"
+            }
+            return str.charAt(0).toUpperCase() + str.slice(1);
+          }
+          var city = "paris";                 // "paris"
+          var capital = capitalize(city);     // "Paris"
+          var num = 37;                       // 37
+          var capital = capitalize(num);      // "That's not a string!"
+
+        </script>
+
+
+
+
+2 different syntaxes for declaring a function, (examples)
+
+              Function Declaration                 vs.                  Function Expression
+         What we've been using so far                               Important: If declared variable is declared a new value, 
+                                                                               the function is lost.
+
+<script> // These are the same function, just written in two different ways
+  
+function capitalize(str) {                                      var capitalize = function(str) {    
+  return str.charAt(0).toUpperCase() + str.slice(1);              return str.charAt(0).toUpperCase() + str.slice(1);
+}                                                               }
+                                                                // Note: If capitalize is declared a new value, 
+                                                                //       the function will be lost.
+
+</script>
+
+
