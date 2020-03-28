@@ -1,34 +1,69 @@
-Exercises
-  <script>
-  
-  Print all numbers between -10 and 19, inclusive
-  var num = -10;
-  while(num < 20){
-    console.log(num);
-    num++;
-  }
-  
-  Print all even numbers between 10 and 40, inclusive
-  var num = 10;
-  while(num < 41){
-    console.log(num);
-    num++;
-  }
-  
-  Print all odd numbers between 300 and 333, inclusive
-  var num = 300;
-  while(num < 334){
-    console.log(num);
-    num++;
-  }
-  
-  Print all numbers divisible by 5 and 3 between 5 and 50, inclusive
-  var num = 5;
-  while(num < 50){
-    if( (num % 5 === 0) && (num % 3 === 0) ){
-      console.log(num);
-    }
-    num++;
-  }
-  
-  </script>
+Tip: Try to write DRY (Don't Repeat Yourself) code
+
+WHILE loops repeat code while a condition is true.
+
+Pattern:
+        <script>
+                while(someCondition){
+                  code block;
+                }
+        </script>
+
+Examples:
+        <script>
+                var str = "hello";
+                var count = 0;
+                while(count < str.length){
+                  console.log(str[count]);
+                  count++;
+                }
+        </script>
+
+Exercises:
+        <script>
+                //   Print all numbers between -10 and 19, inclusive
+                  var num = -10;
+                  while(num < 20){
+                    console.log(num);
+                    num++;
+                  }
+
+                //   Print all even numbers between 10 and 40, inclusive
+                  var num = 10;
+                  while(num <= 40){
+                    console.log(num);
+                    num+=2;
+                  }
+
+                  var num = 10;
+                  while(num <= 40){
+                    if(num % 2 === 0){
+                      console.log(num);
+                    }
+                    num++;
+                  }
+
+                //   Print all odd numbers between 300 and 333, inclusive
+                  var num = 301;
+                  while(num < 333){
+                    console.log(num);
+                    num+=2;
+                  }
+
+                  var num = 300;
+                  while(num < 334){
+                    if(num % 2 !== 0){
+                      console.log(num);
+                    }
+                    num++;
+                  }
+
+                //   Print all numbers divisible by 5 and 3 between 5 and 50, inclusive
+                  var num = 5;
+                  while(num <= 50){
+                    if( (num % 5 === 0) && (num % 3 === 0) ){
+                      console.log(num);
+                    }
+                    num++;
+                  }
+        </script>
