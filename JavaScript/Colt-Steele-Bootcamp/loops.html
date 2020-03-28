@@ -67,3 +67,34 @@ WHILE loops repeat code while a condition is true.
                             num++;
                           }
                 </script>
+
+FOR loops
+
+        Pattern:
+                <script>
+                        for(initialize; condition; step){
+                          code block;
+                        }
+                </script>
+
+        Examples:
+                <script>
+                        // Print numbers 1-5
+                        // For loop                                     // While loop
+                        for(var count=0; count<6; count++) {            var count = 0;
+                          console.log(count);                           while(count < 6) {
+                        }                                                 console.log(count);
+                                                                          count++;
+                                                                        }
+                        // Notice that variable count is declared inside the for loop, but outside the while loop.
+                        
+                        // Print each character in a string
+                        // For loop                                     // While loop
+                        var str = "hello";                              var str = "hello";
+                        for(var i=0; i<str.length; i++) {               var count = 0;
+                          console.log(str[i]);                          while(count < str.length) {
+                        }                                                 console.log(str[count]);
+                                                                          count++;
+                                                                        }
+                        // i and count are pretty much the same here
+                </script>
