@@ -1,11 +1,50 @@
 Functions are the most important aspect of JS!
 
+
+
 Functions Overview
   - Lets us wrap bits of code up into reusable packages
+
   - Has a 2-step process:
+
     <script>
-            // 1. Declare the function.               2. Call (execute) the function.
-                function doSomething() {                 doSomething(); // The parantheses here are important to actually execute the function!
-                  console.log("Hello world");            doSomething;   // Without the parantheses, the console would just recall the function structure.
+            // 1. Declare the function.               
+                function doSomething() {                 
+                  console.log("Hello world");            
                 }
+      
+            // 2. Call (execute) the function.
+                doSomething(); // The parantheses here are important to actually execute the function!
+                doSomething;   // Without the parantheses, the console would just recall the function structure.
+    </script>
+
+
+
+Arguments
+  - Allows functions to take inputs
+  - This makes functions super powerful!
+
+  - Example:
+
+    <script>
+      function sayHello(name) {                       // This function takes in an argument, name
+        console.log("Hello there, " + name + "!");
+      }
+      
+      function area(length, width) {                  // Functions can have as many arguments as needed!
+        console.log(length * width);
+      }
+      
+      function greet(person1, person2, person3) {    
+        console.log("hi " + person1);                
+        console.log("hi " + person2);       
+        console.log("hi " + person3);
+      }
+      greet("Harry", "Ron", "Hermione");              hi Harry
+                                                      hi Ron
+                                                      hi Hermione
+                                                      
+      greet("Harry", "Ron");                          hi Harry
+                                                      hi Ron
+                                                      hi undefined
     </script>
