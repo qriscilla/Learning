@@ -1,0 +1,37 @@
+Objective:
+  Ask the user "Are we there yet"
+  Keep asking again and again until they enter "yes" or "yeah"
+  Then, alert "Yay, we finally made it!"
+  
+  <script>
+
+          var answer = prompt("Are we there yet?");
+
+          while(answer !== "yes" && answer !== "yeah") {
+            var answer = prompt("Are we there yet?");
+          }
+
+          // This code will only run after the while loop is over!
+          alert("Yay, we finally made it!");
+
+  </script>
+  
+  
+  
+  
+Bonus:
+  A user can enter any string as long as it contains "yes" in it
+  
+  <script>
+
+          var answer = prompt("Are we there yet?");
+
+          // while "yes" doesn't exist inside the answer
+          while(answer.indexOf("yes") === -1) {
+            var answer = prompt("Are we there yet?");
+          }
+
+          // This code will only run after the while loop is over!
+          alert("Yay, we finally made it!");
+
+  </script>
