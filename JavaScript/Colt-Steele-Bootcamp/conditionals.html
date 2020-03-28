@@ -1,17 +1,61 @@
 One of the most important concepts in programming!
 
 3 JS conditional keywords:
-  if
-  else if
-  else
+  if - takes a single condition and runs code block if it is true
+  else if - follows an if-statement and is a secondary condition
+  else - "otherwise"; run code block if none of the above conditions were met
   
 Club Bouncer Example
 
   If you are younger than 18
     you cannot enter the club
-    
   If you are between 18 and 21
     you can enter but cannot drink
-    
   Otherwise
     you can enter and drink
+
+  <script>
+    if(age < 18) {
+      console.log("Sorry, you're not old enough to enter the club.")
+    } else if(age < 21) {
+      console.log("You can enter, but cannot drink.")
+    } else {
+      console.log("Come on in. You can drink.")
+    }
+  </script>
+
+Exercise
+
+  If age is negative
+    print an error message
+
+  If age is 21
+    print "Happy 21st birthday!"
+
+  If age is odd
+    print "Your age is odd!"
+
+  Super bonus: If age is a perfect square,
+    print "Your age is a perfect square!"
+
+  <script>
+
+    var age = Num(prompt("How old are you?"))
+    
+    if(age < 0) {
+      console.log("You can't be negative years old!")
+    }
+    
+    if(age === 21) {
+      console.log("Happy 21st birthday!")
+    }
+    
+    if( (age % 2) !== 0 ) {
+      console.log("Your age is odd!")
+    }
+    
+    if( age % Math.sqrt(age) === 0) {
+      console.log("Your age is a perfect square!")
+    }
+    
+  </script>
