@@ -118,9 +118,9 @@ Exercises:
   
   function isEven(num) {
     if(num % 2 === 0) {
-      return(true);
+      return true;    // Don't need parantheses, like return(true), for booleans
     } else {
-      return(false);
+      return false;
     }
   }
   
@@ -137,7 +137,8 @@ num--
   
   function factorial(num) {
     for(var i = 1; i < num; i++) {
-      console.log(i);
+      num *= num * i;
+      return(num);
     }
   }
 
