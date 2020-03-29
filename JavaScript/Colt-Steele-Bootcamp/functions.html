@@ -1,9 +1,5 @@
 Functions are the most important aspect of JS!
 
-
-
-
-
 Functions Overview
   - Lets us wrap bits of code up into reusable packages
 
@@ -19,10 +15,6 @@ Functions Overview
                 doSomething(); // The parantheses here are important to actually execute the function!
                 doSomething;   // Without the parantheses, the console would just recall the function structure.
     </script>
-
-
-
-
 
 Arguments
   - Allows functions to take inputs
@@ -53,17 +45,10 @@ Arguments
                                                       hi undefined
     </script>
 
-
-
-
-
-
-
       Console.log                 vs.                 Return
 Doesn't capture output                          Captures an output 
 Only prints in console                          Prints and saves output
                                                 As soon as this (return) runs, the function execution is over. None of the following codes will run.
-
 Examples:
         <script>
 
@@ -89,9 +74,6 @@ Examples:
 
         </script>
 
-
-
-
 2 different syntaxes for declaring a function, (examples)
 
               Function Declaration                 vs.                  Function Expression
@@ -107,9 +89,6 @@ Examples:
                                                                       // Note: If capitalize is declared a new value, 
                                                                       //       the function will be lost.
       </script>
-
-
-
 
 Exercises:
 
@@ -129,7 +108,45 @@ Exercises:
   }
   test(40);                     // 80
 
-// Turn the following statements into functions
+// isEven()
+// Write a function that takes a single numeric argument and returns true if the number is even, and false otherwise
+// Example outputs:
+  isEven(4);        // true
+  isEven(21);       // false
+  isEven(68);       // true
+  isEven(333);      // false
+  
+  function isEven(num) {
+    if(num % 2 === 0) {
+      return(true);
+    } else {
+      return(false);
+    }
+  }
+  
+// factorial()
+// Write a function that takes a single numeric argument and returns the factorial of that number
+// Example Outputs
+  factorial(5);     // 120
+  factorial(2);     // 2
+  factorial(10);    // 3628800
+  factorial(0);     // 1
+num--
+
+  5 * 4 * 3 * 2 * 1
+  
+  function factorial(num) {
+    for(var i = 1; i < num; i++) {
+      console.log(i);
+    }
+  }
+
+  // kebabToSnake()
+  // Write a function that takes a single kebab-cased string argument and returns the snake_cased version
+  // Basically, replaces "-"s with "_"s
+  kebabToSnake("hello-world");        // "hello_world"
+  kebabToSnake("dogs-are-awesome");   // "dogs_are_awesome"
+  kebabToSnake("blah");               // "blah"
 
 </script>
 
