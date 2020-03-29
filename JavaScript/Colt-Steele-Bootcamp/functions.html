@@ -92,67 +92,138 @@ Examples:
 
 Exercises:
 
-<script>
-  
-// What do the following codes return?
-  
-  function test(x, y) {
-    return y - x;
-  }
-  test(10, 40);                 // 30
-  
-  function test(x) {
-    return x*2;         // The code will stop running after the return keyword.
-    console.log(x);     // This console.log won't run.
-    return x/2;         // This return won't run.
-  }
-  test(40);                     // 80
+          <script>
 
-// isEven()
-// Write a function that takes a single numeric argument and returns true if the number is even, and false otherwise
-// Example outputs:
-  isEven(4);        // true
-  isEven(333);      // false
-  
-  function isEven(num) {
-    if(num % 2 === 0) {
-      return true;          // Don't need parantheses, like return(true), for booleans
-    } else {
-      return false;
-    }
-  }
-  
-  function isEven(num) {
-    return num % 2 === 0;   // This itself is a boolean statement, so the function will evaluate it
-  }
-  
-// factorial()
-// Write a function that takes a single numeric argument and returns the factorial of that number
-// Example Outputs
-  factorial(5);     // 120
-  factorial(2);     // 2
-  factorial(0);     // 1
-  
-  function factorial(num) {
-    // define a result variables
-    var result = 1;
-    // calculate factorial and store value in result
-    for(var i = 2; i <= num; i++) {
-      result *= i;
-    }
-    // return the result variable
-    return result;
-  }
+          // What do the following codes return?
 
-  // kebabToSnake()
-  // Write a function that takes a single kebab-cased string argument and returns the snake_cased version
-  // Basically, replaces "-"s with "_"s
-  kebabToSnake("hello-world");        // "hello_world"
-  kebabToSnake("blah");               // "blah"
-  
-  function kebabToSnake(str) {
-    var res = str.replace("-", "_");
-    return res;
-  }
+            function test(x, y) {
+              return y - x;
+            }
+            test(10, 40);                 // 30
 
-</script>
+            function test(x) {
+              return x*2;         // The code will stop running after the return keyword.
+              console.log(x);     // This console.log won't run.
+              return x/2;         // This return won't run.
+            }
+            test(40);                     // 80
+
+          // isEven()
+          // Write a function that takes a single numeric argument and returns true if the number is even, and false otherwise
+          // Example outputs:
+            isEven(4);        // true
+            isEven(333);      // false
+
+            function isEven(num) {
+              if(num % 2 === 0) {
+                return true;          // Don't need parantheses, like return(true), for booleans
+              } else {
+                return false;
+              }
+            }
+
+            function isEven(num) {
+              return num % 2 === 0;   // This itself is a boolean statement, so the function will evaluate it
+            }
+
+          // factorial()
+          // Write a function that takes a single numeric argument and returns the factorial of that number
+          // Example Outputs
+            factorial(5);     // 120
+            factorial(2);     // 2
+            factorial(0);     // 1
+
+            function factorial(num) {
+              // define a result variables
+              var result = 1;
+              // calculate factorial and store value in result
+              for(var i = 2; i <= num; i++) {
+                result *= i;
+              }
+              // return the result variable
+              return result;
+            }
+
+            // kebabToSnake()
+            // Write a function that takes a single kebab-cased string argument and returns the snake_cased version
+            // Basically, replaces "-"s with "_"s
+            kebabToSnake("hello-world");        // "hello_world"
+            kebabToSnake("blah");               // "blah"
+
+            function kebabToSnake(str) {
+              var res = str.replace("-", "_");
+              return res;
+            }
+
+          </script>
+
+SCOPE
+  - the context a code is executed in
+  - variables are not defined the same outside the function
+  - variables are not shared between different functions
+
+  Example:
+          <script>
+
+            function doMath() {
+              var x = 40;       
+              console.log(x);               
+            }
+
+            // Running
+            doMath(); // outside the code will give you an output of 40
+            x         // outside the code will not give you 40, though, because x is only defined within the doMath() function
+
+          </script>
+
+  Exercises:
+          <script>
+
+            var num = 8;                     
+            function doMath() {              
+              num += 1;
+              if(num % 5 == 0) {
+                return true
+              } else {
+                return false
+              }
+            }
+
+            // What would the following code return?
+            num += 1;
+            doMath();
+            // true
+
+          </script>
+
+Higher Order Functions
+  - functions that either take a function as an argument or return another function
+
+  Set Interval
+    - takes a function and calls that function at a specific interval that we provide
+    - loops repeat code immediately, but set interval lets us time it out
+    - Pattern: <script>   setInterval(anotherFunc, intervalInMilliseconds);  
+                          clearInterval(whateverNumberSetIntervalReturned);
+              </script>
+
+    Example:
+            <script>
+              
+              function sing() {
+                console.log("twinkle twinkle...");
+                console.log("how i wonder...");
+              }
+
+              setInterval(sing, 1000);    // Don't need parentheses after sing
+                                          // This will also return us a numerical value like 2
+
+              clearInterval(2);           // This will stop the interval
+
+              // Another way to write this code:
+              setInterval(function() {
+                console.log("twinkle twinkle");
+                console.log("how i wonder!");
+              }, 1000;)
+              
+            </script>
+
