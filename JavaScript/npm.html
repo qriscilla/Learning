@@ -11,26 +11,24 @@ package.json
   - (e.g., "start": "node index.js" runs the specified file, so one doesn't need to go in and check "main"
 
 Commands
-  <script>
-    npm                               // brings up the help page and gives a list of all the npm commands
-    npm -v                            // (or npm --version) to see the version of NPM installed on your system
-    npm init                          // creates a package.json file
-    npm init -y                       // (or npm init --yes) makes a package.json file and accepts all the default answers
-    npm get init                      // (e.g., npm get init-author-name) to check what the default answer is for a specified field
-    npm set                           // (e.g., npm set init-license "MIT") changes the default answer for a specified field
-    npm config delete                 // (e.g., npm config delete init-author-name) to delete the default answer for a specified field
-    npm install <module> --save       // saves the module as a dependency in package.json
-    npm install <module> --save-dev   // saves the module as a dev dependency you'll only use in the dev environment
-    npm install --production          // will save all necessary modules expect for the ones listed under dev dependencies
-    npm uninstall <module>            // uninstall the module
-    npm remove <module>               // (or npm rm <module>) remove all the module aliases
-    npm update <module>               // updates the module to the latest minor (not major) version
-    npm install -g <module>           // installs the module globally
-    npm root -g                       // tells you where all your global modules go/went
-    npm remove -g <module>            // remove the global module
-    npm list                          // lists all the dependencies in the app
-    npm list --depth <number>         // lists all the dependencies at a specified level (e.g., 0)
-  </script>
+  npm                               brings up the help page and gives a list of all the npm commands
+  npm -v                            (or npm --version) to see the version of NPM installed on your system
+  npm init                          creates a package.json file
+  npm init -y                       (or npm init --yes) makes a package.json file and accepts all the default answers
+  npm get init                      (e.g., npm get init-author-name) to check what the default answer is for a specified field
+  npm set                           (e.g., npm set init-license "MIT") changes the default answer for a specified field
+  npm config delete                 (e.g., npm config delete init-author-name) to delete the default answer for a specified field
+  npm install <module> --save       saves the module as a dependency in package.json
+  npm install <module> --save-dev   saves the module as a dev dependency you'll only use in the dev environment
+  npm install --production          will save all necessary modules expect for the ones listed under dev dependencies
+  npm uninstall <module>            uninstall the module
+  npm remove <module>               (or npm rm <module>) remove all the module aliases
+  npm update <module>               updates the module to the latest minor (not major) version
+  npm install -g <module>           installs the module globally
+  npm root -g                       tells you where all your global modules go/went
+  npm remove -g <module>            remove the global module
+  npm list                          lists all the dependencies in the app
+  npm list --depth <number>         lists all the dependencies at a specified level (e.g., 0)
   
 Example - Lodash (a module that e.g., iterates arrays, objects, and strings)
   <script>
