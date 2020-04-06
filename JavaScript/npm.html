@@ -7,23 +7,31 @@ package.json
   - Probably the most important file in Node.js!
   - It's a manifest file with info about the app (name, author, description, etc.)
   - Lists all the app dependencies (modules the app needs it to work) and their versions
-  - Main is the entry point (e.g., "main": "index.js")
+  - (e.g., "main": "index.js")Main is the entry point 
+  - (e.g., "start": "node index.js" runs the specified file, so one doesn't need to go in and check "main"
 
 Commands
-  npm                               brings up the help page and gives a list of all the npm commands
-  npm -v                            (or npm --version) to see the version of NPM installed on your system
-  npm init                          creates a package.json file
-  npm init -y                       (or npm init --yes) makes a package.json file and accepts all the default answers
-  npm get init                      (e.g., npm get init-author-name) to check what the default answer is for a specified field
-  npm set                           (e.g., npm set init-license "MIT") changes the default answer for a specified field
-  npm config delete                 (e.g., npm config delete init-author-name) to delete the default answer for a specified field
-  npm install <module> --save       saves the module as a dependency in package.json
-  npm install <module> --save-dev   saves the module as a dev dependency you'll only use in the dev environment
-  npm install --production          will save all necessary modules expect for the ones listed under dev dependencies
-  npm uninstall <module>            uninstall the module
-  npm remove <module>               (or npm rm <module>) remove all the module aliases
-  npm update <module>               updates the module to the most updated version
-
+  <script>
+    npm                               // brings up the help page and gives a list of all the npm commands
+    npm -v                            // (or npm --version) to see the version of NPM installed on your system
+    npm init                          // creates a package.json file
+    npm init -y                       // (or npm init --yes) makes a package.json file and accepts all the default answers
+    npm get init                      // (e.g., npm get init-author-name) to check what the default answer is for a specified field
+    npm set                           // (e.g., npm set init-license "MIT") changes the default answer for a specified field
+    npm config delete                 // (e.g., npm config delete init-author-name) to delete the default answer for a specified field
+    npm install <module> --save       // saves the module as a dependency in package.json
+    npm install <module> --save-dev   // saves the module as a dev dependency you'll only use in the dev environment
+    npm install --production          // will save all necessary modules expect for the ones listed under dev dependencies
+    npm uninstall <module>            // uninstall the module
+    npm remove <module>               // (or npm rm <module>) remove all the module aliases
+    npm update <module>               // updates the module to the latest minor (not major) version
+    npm install -g <module>           // installs the module globally
+    npm root -g                       // tells you where all your global modules go/went
+    npm remove -g <module>            // remove the global module
+    npm list                          // lists all the dependencies in the app
+    npm list --depth <number>         // lists all the dependencies at a specified level (e.g., 0)
+  </script>
+  
 Example - Lodash (a module that e.g., iterates arrays, objects, and strings)
   <script>
     // Install Lodash
@@ -45,6 +53,29 @@ Example - Lodash (a module that e.g., iterates arrays, objects, and strings)
     46
     75
   </script>
-  
+
+Semantic Versioning
+  E.g., 8.2.6
+        8     Major version
+              Careful! Will break the application
+        2     Minor version
+              Should not break anything in the application
+              E.g., Adding a new feature
+        6     Patch
+              Should not break anything in the application
+              E.g., A bug fix
+
+When installing an updated version,
+  E.g.,   "lodash": "4.17.4"      Will download the exact version (4.17.4)
+          "lodash": "^4.17.4"     Will download the latest minor version
+          "lodash": "~4.17.4"     Will download the latest patch version
+
+Global Modules
+  - When installed, doesn't go inside the node module or the package.json. It gets installed on the computer globally
+  - Nodemon is usually downloaded globally
+
+Local Modules
+  - When installed, goes inside the node module and package.json
+    
 Resources:
   Traversy Media NPM Crash Course https://www.youtube.com/watch?v=jHDhaSSKmB0
