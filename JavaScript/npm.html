@@ -3,18 +3,48 @@ Overview of NPM (Node Package Manager)
   - Allows us to easily install packages or modules (JS libraries)
   - https://www.npmjs.com/ has open-source NPM modules
 
-In command line, run
-  npm                   brings up the help page and gives a list of all the npm commands
-  npm -v                (or npm --version) to see the version of NPM installed on your system
-  npm init              creates a package.json file
-  npm init -y           (or npm init --yes) to make a package.json file and accept all the default answers
-  npm config set        (e.g., npm config set init-author-name "Priscilla Whang") will update the specified field
-  npm set               (e.g., npm set init-license "MIT") changes the default answer for a specified field
-
 package.json
   - Probably the most important file in Node.js!
   - It's a manifest file with info about the app (name, author, description, etc.)
   - Lists all the app dependencies (modules the app needs it to work) and their versions
+  - Main is the entry point (e.g., "main": "index.js")
+
+Commands
+  npm                               brings up the help page and gives a list of all the npm commands
+  npm -v                            (or npm --version) to see the version of NPM installed on your system
+  npm init                          creates a package.json file
+  npm init -y                       (or npm init --yes) makes a package.json file and accepts all the default answers
+  npm get init                      (e.g., npm get init-author-name) to check what the default answer is for a specified field
+  npm set                           (e.g., npm set init-license "MIT") changes the default answer for a specified field
+  npm config delete                 (e.g., npm config delete init-author-name) to delete the default answer for a specified field
+  npm install <module> --save       saves the module as a dependency in package.json
+  npm install <module> --save-dev   saves the module as a dev dependency you'll only use in the dev environment
+  npm install --production          will save all necessary modules expect for the ones listed under dev dependencies
+  npm uninstall <module>            uninstall the module
+  npm remove <module>               (or npm rm <module>) remove all the module aliases
+  npm update <module>               updates the module to the most updated version
+
+Example - Lodash (a module that e.g., iterates arrays, objects, and strings)
+  <script>
+    // Install Lodash
+    npm install lodash --save
+
+    // In the main file,
+    const _ = require('lodash');              // _ is the convention for lodash
+                                              // bring in the module you installed by requiring it
+    const numbers = [33, 46, 75];             // a simple array variable with random numbers
+    _.each(numbers, function(number, i){      // loop through using .each() function
+      console.log(number);
+    });
+    
+    // Back to command line,
+    node index.js                             // or just node index
+    
+    // output:
+    33
+    46
+    75
+  </script>
   
 Resources:
-Traversy Media NPM Crash Course https://www.youtube.com/watch?v=jHDhaSSKmB0
+  Traversy Media NPM Crash Course https://www.youtube.com/watch?v=jHDhaSSKmB0
