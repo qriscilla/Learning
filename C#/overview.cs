@@ -1,12 +1,11 @@
-// C# Overview
-   // OOP language developed by Microsoft
-   // Runs on the .NET Framework
-   // Close to C++ and Java
-   // Said to be more structured than JS
-  
-// How To
-  // Need IDE (Integrated Development Environment) e.g., Visual Studio
-  // Make sure C# is properly installed to be able to run code
+/* C# Overview
+   OOP language developed by Microsoft
+   Runs on the .NET Framework
+   Close to C++ and Java
+   Said to be more structured than JS */
+/* How To
+   Need IDE (Integrated Development Environment) e.g., Visual Studio
+   Make sure C# is properly installed to be able to run code */
   
 // Syntax Example
   using System;                                   // We're using classes from the System namespace
@@ -25,14 +24,14 @@
   // Output
   Hello World!
   
-// Important Notes About C# Syntax
-  // C# is case-sensitive! (E.g., MyClass and myclass are different)
-  // It's not required, but better to match the file name to the class name (e.g., Program)
-  // C# files end in .cs
+/* Important Notes About C# Syntax
+   C# is case-sensitive! (E.g., MyClass and myclass are different)
+   It's not required, but better to match the file name to the class name (e.g., Program)
+   C# files end in .cs */
   
-// WriteLine() vs. Write()
-  // WriteLine() prints the output on a new line each time
-  // Write() prints the output on the same line
+/* WriteLine() vs. Write()
+   WriteLine() prints the output on a new line each time
+   Write() prints the output on the same line */
   
   // Example
   
@@ -46,3 +45,7 @@
     Console.Write("I will print on the same line as before.");
       // Output
       Hello World! I will print on the same line as before.
+         
+// for single-line commenting
+/* for double-
+   line commenting */
