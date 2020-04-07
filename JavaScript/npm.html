@@ -7,7 +7,7 @@ package.json
   - Probably the most important file in Node.js!
   - It's a manifest file with info about the app (name, author, description, etc.)
   - Lists all the app dependencies (modules the app needs it to work) and their versions
-  - (e.g., "main": "index.js")Main is the entry point 
+  - (e.g., "main": "index.js") Main is the entry point 
   - (e.g., "start": "node index.js") runs the specified file, so one doesn't need to go in and check "main"
 
 Commands
@@ -15,18 +15,18 @@ Commands
   npm -v                            (or npm --version) to see the version of NPM installed on your system
   npm init                          creates a package.json file
   npm init -y                       (or npm init --yes) makes a package.json file and accepts all the default answers
-  npm get init                      (e.g., npm get init-author-name) to check what the default answer is for a specified field
+  npm get init                      (e.g., npm get init-author-name) checks what the default answer is for a specified field
   npm set                           (e.g., npm set init-license "MIT") changes the default answer for a specified field
-  npm config delete                 (e.g., npm config delete init-author-name) to delete the default answer for a specified field
+  npm config delete                 (e.g., npm config delete init-author-name) deletes the default answer for a specified field
   npm install <module> --save       saves the module as a dependency in package.json
   npm install <module> --save-dev   saves the module as a dev dependency you'll only use in the dev environment
-  npm install --production          will save all necessary modules expect for the ones listed under dev dependencies
-  npm uninstall <module>            uninstall the module
-  npm remove <module>               (or npm rm <module>) remove all the module aliases
-  npm update <module>               updates the module to the latest minor (not major) version
+  npm install --production          saves all necessary modules expect for the ones listed under dev dependencies
+  npm uninstall <module>            uninstalls the module
+  npm remove <module>               (or npm rm <module>) removes all the module aliases
+  npm update <module>               updates the module to the latest minor version
   npm install -g <module>           installs the module globally
   npm root -g                       tells you where all your global modules go/went
-  npm remove -g <module>            remove the global module
+  npm remove -g <module>            removes the global module
   npm list                          lists all the dependencies in the app
   npm list --depth <number>         lists all the dependencies at a specified level (e.g., 0)
   
@@ -38,12 +38,12 @@ Example - Lodash (a module that e.g., iterates arrays, objects, and strings)
     // In the main file,
     const _ = require('lodash');              // _ is the convention for lodash
                                               // bring in the module you installed by requiring it
-    const numbers = [33, 46, 75];             // a simple array variable with random numbers
+    const numbers = [33, 46, 75];             // a simple array variable with a few random numbers
     _.each(numbers, function(number, i){      // loop through using .each() function
       console.log(number);
     });
     
-    // Back to command line,
+    // Back to command line, run
     node index.js                             // or just node index
     
     // output:
@@ -57,11 +57,11 @@ Semantic Versioning
         8     Major version
               Careful! Will break the application
         2     Minor version
-              Should not break anything in the application
               E.g., Adding a new feature
-        6     Patch
               Should not break anything in the application
+        6     Patch
               E.g., A bug fix
+              Should not break anything in the application
 
 When installing an updated version,
   E.g.,   "lodash": "4.17.4"      Will download the exact version (4.17.4)
