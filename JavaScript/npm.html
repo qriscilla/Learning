@@ -39,12 +39,17 @@ Example - Lodash (a module that e.g., iterates arrays, objects, and strings)
     const _ = require('lodash');              // _ is the convention for lodash
                                               // bring in the module you installed by requiring it
     const numbers = [33, 46, 75];             // a simple array variable with a few random numbers
-    
     _.each(numbers, function(number, i){      // loop through using .each() function
       console.log(number);
     });
     
-    // Back to command line, run
+    // In vanilla JS, it would look like this
+    var numbers = [33, 46, 75];
+    for(var i=0; i<numbers.length; i++){
+      console.log(numbers[i]);
+    }
+    
+    // Anyway, back to command line, run
     node index.js                             // or just node index
     
     // output:
