@@ -20,7 +20,7 @@ Commands
   npm config delete                 (e.g., npm config delete init-author-name) deletes the default answer for a specified field
   npm install <module> --save       saves the module as a dependency in package.json
   npm install <module> --save-dev   saves the module as a dev dependency you'll only use in the dev environment
-  npm install --production          saves all necessary modules expect for the ones listed under dev dependencies
+  npm install --production          saves all necessary modules except for the ones listed under dev dependencies
   npm uninstall <module>            uninstalls the module
   npm remove <module>               (or npm rm <module>) removes all the module aliases
   npm update <module>               updates the module to the latest minor version
@@ -39,6 +39,7 @@ Example - Lodash (a module that e.g., iterates arrays, objects, and strings)
     const _ = require('lodash');              // _ is the convention for lodash
                                               // bring in the module you installed by requiring it
     const numbers = [33, 46, 75];             // a simple array variable with a few random numbers
+    
     _.each(numbers, function(number, i){      // loop through using .each() function
       console.log(number);
     });
