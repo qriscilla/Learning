@@ -29,19 +29,6 @@
    C# is case-sensitive! (E.g., MyClass and myclass are different)
    It's not required, but better to match the file name to the class name (e.g., Program.cs)
    C# files end in .cs */
-  
-// WriteLine() vs. Write()
-  // WriteLine() prints the output on a new line each time
-       Console.WriteLine("Hello World!");
-       Console.WriteLine("I will print on a new line.");
-         // Output
-         Hello World!
-         I will print on a new line.
-  // Write() prints the output on the same line */
-       Console.Write("Hello World!");
-       Console.Write("I will print on the same line as before.");
-         // Output
-         Hello World! I will print on the same line as before.
          
 // for single-line commenting
 /* for double-
