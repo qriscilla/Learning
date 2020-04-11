@@ -14,11 +14,11 @@
               12E4D           // Optionally end with "D" and add an "e" to indicate power of 10
                               // Allows more digits after the decimal point, so more "precise" than float
                               
-  // Characters
+  // Characters (for more detailed notes, see strings.cs)
     char      'a' 'B'         // single character in 'single quotes'                                            2 bytes
     string    "Hello World!"  // text in "double quotes"                                                        2 bytes per character
       
-  // Booleans
+  // Booleans (for more detailed notes, see booleans.cs)
     bool      true  false     // commonly used for conditional testing                                          1 bit
     
 // Type cast when you need to assign a value of one data type to another type
