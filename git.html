@@ -1,0 +1,38 @@
+Git Overview      - A Version Control System (VCS) for tracking changes in computer files
+                  - Distributed / de-centralized VCS; many developers can work on the same project without needing to be on the same network
+                  - Takes "snapshots" of your files by making commits; tracks who made what changes and when
+                  - Can stage files before committing
+                  - Can revert back at any time
+                  - Local changes can be pushed to repository
+                
+Basic Commands    Local Repository
+                  $ git --version               Tells you what git version you have
+                  $ git config                  (e.g., $ git config --global user.name 'Priscilla Whang')
+                                                (e.g., $ git config --global user.email 'pri.whang@gmail.com')                  $ git init                Initialize local git repository; will create a .git folder in the project
+                  $ touch <file>                (e.g., $ touch index.html) Creates a file
+                  $ git rm --cached <file>      (e.g., $ git rm --cached index.html) Remove file
+                  $ git status                  Checks status of working tree
+                  $ git add <file>              Add file(s) to the staging area or the index
+                  $ git add .                   Add all files to the staging area or the index
+                  $ git commit                  Commit changes in index and pushes it to the local repository
+                  $ git commit -m "<comment>"   Commit changes with comment, skipping the editing stage
+                  
+                  Remote Repository
+                  $ git push                    Pushes local repository to remote repository
+                  $ git pull                    Pull latest changes from remote repository
+                  $ git clone                   Copy repository into the current directory
+
+Git Ignore        - Use this for things you don't want to include in your repository
+
+                  $ touch .gitignore            Creates gitignore file
+                  
+                  Examples    Say you have a file named log.txt that you don't want in your repository
+                              In .gitignore, add the code log.txt, and it won't go into the repository
+                              
+                              Say you have a folder named dir2 that you don't want in your repository
+                              In .gitignore, add the code /dir2, and it won't go into the repository
+                              
+                              Say you have a bunch of .txt files that you don't want in your repository
+                              In .gitignore, add the code *.txt and all .txt files won't go into the repository
+
+Resources   Traversy Media  https://www.youtube.com/watch?v=SWYqp7iY_Tc
