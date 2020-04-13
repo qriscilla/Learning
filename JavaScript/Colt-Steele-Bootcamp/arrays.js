@@ -84,9 +84,18 @@ Built-in Methods
                 //  Example 2
                     var nums = [1, 2, 3];                                             
                     var otherNums = nums.slice();                                   //  Both arrays are [1, 2, 3]
-                                                                                  
-                                                                                  
-                                                                                    
+
+Arrays Exercises    //  Exercise 1 - What does the console.log print?
+                        var numbers = [22, 67, 33, 96, 88];
+                        console.log(numbers[numbers.length]);         //  undefined
+                
+                    //  Exercise 2 - What does the console.log print?
+                        var friendGroups = [                          // This is called a "nested array" or a 2D array
+                          ["Harry", "Ron", "Hermione"],
+                          ["Malfoy", "Crabbe", "Goyles"],
+                          ["Mooney", "Wormtail", "Prongs"]
+                        ];
+                        console.log(friendGroups[2][0]);              //  Mooney
                 
                 
                 
