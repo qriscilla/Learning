@@ -1,0 +1,20 @@
+"new" - Add a task
+"list" - List all tasks
+"quit" - Quit app
+
+<script>
+
+  var todos = ["Buy New Turtle"];
+  var input = prompt("What would you like to do?");
+  
+  while (input !== "quit") {
+    if (input === "new") {
+      var newTodo = prompt("Enter a new task.");
+      todos.push(newTodo);
+    } else if (input === "list") {
+      console.log(todos);
+    }
+    console.log("Ok, you quit the app.");
+  }
+  
+</script>
