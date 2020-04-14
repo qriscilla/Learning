@@ -36,7 +36,7 @@ Add New Data            //  Can use indices to add new data to an array
                             var friends = ["Charlie", "Liz", "David", "Mattias"];
                             friends[5] = "Amelie";                                  //  friends is now ["Chuck", "Liz", "David", "Mattias", undefined, "Amelie"]  
                                                                                     //  friend[4] data is not defined, so JS skips this and adds "Amelie" as friends[5]
-                                                                                    
+                                                                                   
 Built-in Methods
 
     Push        //  Push to add a new data to the end of an array
@@ -85,6 +85,28 @@ Built-in Methods
                     var nums = [1, 2, 3];                                             
                     var otherNums = nums.slice();                                   //  Both arrays are [1, 2, 3]
 
+Array Iteration     //  Iterating or looping through an array and doing something to or with each item
+                    //  This is usually done with for loop or foreach. It's rarely done with while loop
+
+                    //  For Loop
+                    //  To for-loop over an array, we need to make use of the array's length property
+                    //  Example
+                        var colors = ["red", "orange", "yellow", "green"];
+                        for(var i = 0; i < colors.length; i++) {
+                          console.log(colors[i]);
+                        }
+
+                    //  ForEach
+                    //  Syntax
+                        arr.forEach(someFunction)
+                    //  Example
+                        var colors = ["red", "orange", "yellow", "green"];
+                        colors.forEach(function(color)) {                   //  The function is called for each element in the colors array
+                          console.log(color + " is a color");               //  red is a color
+                        }                                                   //  orange is a color
+                                                                            //  yellow is a color
+                                                                            //  green is a color
+
 Arrays Exercises    //  Exercise 1 - What does the console.log print?
                         var numbers = [22, 67, 33, 96, 88];
                         console.log(numbers[numbers.length]);         //  undefined
@@ -97,7 +119,23 @@ Arrays Exercises    //  Exercise 1 - What does the console.log print?
                         ];
                         console.log(friendGroups[2][0]);              //  Mooney
                 
-                
+                    //  Exercise 3 - What does the following code print out?
+                        var numbers = [1,2,3,4,5,6,7,8,9,10];
+                        var colors = ["red", "orange", "yellow", "green"];
+                        numbers.forEach(function(color){                      //  3
+                          if(color % 3 === 0) {                               //  6
+                            console.log(color);                               //  9
+                          }
+                        });
+
+                    //  Exercise 4 - Translate the above code into a for loop
+                        var numbers = [1,2,3,4,5,6,7,8,9,10];
+                        for(var i=0; i<numbers.length; i++) {
+                          if(i % 3 === 0) {
+                            console.log(i);
+                          }
+                        }
+
                 
                 
                     
