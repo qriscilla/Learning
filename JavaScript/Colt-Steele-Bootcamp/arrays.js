@@ -135,6 +135,66 @@ Arrays Exercises    //  Exercise 1 - What does the console.log print?
                             console.log(i);
                           }
                         }
+                  
+                    //  Exercise 5 - Write a function printReverse() that takes an array as an argument
+                    //  and prints out the elements in the array in reverse order
+                    //  Hint: Don't actually reverse the array itself. Use a loop
+                        function printReverse(arr) {
+                          for(var i = arr.length - 1; i >= 0; i--) {
+                            console.log(arr[i]);
+                          }
+                        }
+                        printReverse([1, 3, 5]);                        //  5
+                                                                        //  3
+                                                                        //  1
+
+                    //  Exercise 6 - Write a function isUniform() which takes an array as an argument
+                    //  and returns true if all elements in the array are identical
+                    //  Hint: Use a loop and have a variable that keeps track of the first index element
+                        function isUniform(arr) {
+                          var first = arr[0];
+                          for(var i = 1; i < arr.length; i++) {
+                            if(arr[i] !== first) {
+                              return false;
+                            }
+                          }
+                          return true;
+                        }
+
+                        function isUniform(arr) {               //  Why forEach doesn't work here:
+                          var first = arr[0];
+                          arr.forEach(function(element){        //  This only returns the exact function once
+                            if(element !== first) {
+                              return false;
+                            }
+                          });
+                          return true;                          //  And the it'll execute this line no matter what
+                        }
+
+                    //  Exercise 7 - Write a function sumArray() which takes an array of numbers and
+                    //  and returns the sum of all numbers in the array
+                    //  Hint: Use a loop and have a variable that sums through each iteration
+                        function sumArray(arr) {
+                          var total = 0;
+                          arr.forEach(function(element){
+                            total += element;
+                          });
+                          return total;
+                        }
+
+                    //  Exercise 8 - Write a function max() which accepts an array of numbers and
+                    //  returns the maximum number in the array
+                    //  Hint: Use a loop and have a variable that updates as the maximum through each iteration
+                        function max(arr) {
+                          var max = arr[0];
+                          for(var i = 1; i < arr.length; i++) {
+                            if(arr[i] > max) {
+                              max = arr[i];
+                            }
+                          }
+                          return max;
+                        }
+
 
                 
                 
