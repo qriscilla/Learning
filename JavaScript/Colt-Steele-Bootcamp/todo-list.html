@@ -1,20 +1,63 @@
-"new" - Add a task
-"list" - List all tasks
-"quit" - Quit app
+Version 1
 
-<script>
+          "new" - Add a task
+          "list" - List all tasks
+          "quit" - Quit app
 
-  var todos = ["Buy New Turtle"];
-  var input = prompt("What would you like to do?");
-  
-  while (input !== "quit") {
-    if (input === "new") {
-      var newTodo = prompt("Enter a new task.");
-      todos.push(newTodo);
-    } else if (input === "list") {
-      console.log(todos);
-    }
-    console.log("Ok, you quit the app.");
-  }
-  
-</script>
+          <script>
+                  var todos = ["Buy New Turtle"];
+                  var input = prompt("What would you like to do?");
+
+                  while (input !== "quit") {
+                    if (input === "new") {
+                      var newTodo = prompt("Enter a new task.");
+                      todos.push(newTodo);
+                    } else if (input === "list") {
+                      console.log(todos);
+                    }
+                    input = prompt("What would you like to do?");
+                  }
+                  console.log("Ok, you quit the app.");
+          </script>
+
+Version 2
+
+          "new" - Add a task
+          "list" - List all tasks
+          "quit" - Quit app
+          "delete" - Delete a task
+
+          <script>
+                  var todos = ["Buy New Turtle"];
+                  var input = prompt("What would you like to do?");
+            
+                  while (input !== "quit") {
+                    if (input === "new") {
+                      addTodos();
+                    } else if (input === "list") {
+                      listTodos();
+                    } else if (input === "delete") {
+                      deleteTodos();
+                    }
+                    input = prompt("What would you like to do?");
+                  }
+                  console.log("Ok, you quit the app.");
+            
+                  function addTodos() {
+                      var newTodo = prompt("Enter a new task.");
+                      todos.push(newTodo);
+                      console.log("Added Todo");
+                  }
+            
+                  function listTodos() {
+                      todos.forEach(function(todo, i) {                     // todo refers to an element in the array; i refers to the index of that element
+                        console.log(i + ": " + todo);
+                      });
+                  }
+            
+                  function deleteTodos() {
+                      var index = prompt("Enter index of todo to delete");
+                      todos.splice(index, 1);                               //  Index of the element to start deleting and how many to delete from there
+                      console.log("Deleted Todo");
+                  }
+          </script>
