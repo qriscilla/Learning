@@ -1,11 +1,11 @@
-Arrays Overview         //  Lets us group data together in lists
-                        //  Arrays are indexed starting at 0
+Arrays Overview         //  Let us group data together in lists
+                        //  Arrays are indexed, starting at 0
 
                         //  Syntax
                             var arrayName = [data1, data2, data3];
                             
                         //  Can hold any type of data
-                            var random_collection = [49, true, "Hermione", null];
+                            var randomCollection = [49, true, "Hermione", null];
                             
                         //  Has a length property
                             var nums = [45, 37, 89, 24];
@@ -55,7 +55,7 @@ Built-in Methods
                 //  Example
                     var colors = ["red", "orange", "yellow"];
                     colors.unshift("infrared");                     //  4 (outputs the array length after adding the new data)
-                                                                    //  colors = ["red", "orange", "yellow", "infrared"];
+                                                                    //  colors = ["infrared", "red", "orange", "yellow"];
                     
     Shift       //  Shift to remove the first item in an array
                 //  Example
@@ -73,23 +73,25 @@ Built-in Methods
     Slice       //  Copy parts of an Array 
     
                 //  Syntax
-                    array.slice(inclusiveStartSlice, exclusiveStopSlice);
+                    array.slice(inclusiveStart, exclusiveStop);
                     
                 //  Example 1
                     var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
-                    var citrus = fruits.slice(1, 3);                                //  copies the [1] and [3] fruits without alterating var citrus
+                    var citrus = fruits.slice(1, 3);                                //  copies the [1] and [3] fruits without alterating var fruits
                                                                                     //  citrus = ['Orange', 'Lemon']
                                                                                     //  fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango', 'Orange', 'Lemon']
                                                                                   
                 //  Example 2
                     var nums = [1, 2, 3];                                             
                     var otherNums = nums.slice();                                   //  Both arrays are [1, 2, 3]
+                                                                                    //  nums = [1, 2, 3]
+                                                                                    //  otherNums = [1, 2, 3]
 
 Array Iteration     //  Iterating or looping through an array and doing something to or with each item
-                    //  This is usually done with for loop or foreach. It's rarely done with while loop
+                    //  Usually done with for loop or foreach. It's rarely done with while loop
 
                     //  For Loop
-                    //  To for-loop over an array, we need to make use of the array's length property
+                    //  To for-loop over an array, we need to use array's length property
                     //  Example
                         var colors = ["red", "orange", "yellow", "green"];
                         for(var i = 0; i < colors.length; i++) {
@@ -101,9 +103,9 @@ Array Iteration     //  Iterating or looping through an array and doing somethin
                         arr.forEach(someFunction)
                     //  Example
                         var colors = ["red", "orange", "yellow", "green"];
-                        colors.forEach(function(color)) {                   //  The function is called for each element in the colors array
+                        colors.forEach(function(color) {                    //  A function is called for each element in the colors array
                           console.log(color + " is a color");               //  red is a color
-                        }                                                   //  orange is a color
+                        });                                                 //  orange is a color
                                                                             //  yellow is a color
                                                                             //  green is a color
 
@@ -122,7 +124,7 @@ Arrays Exercises    //  Exercise 1 - What does the console.log print?
                     //  Exercise 3 - What does the following code print out?
                         var numbers = [1,2,3,4,5,6,7,8,9,10];
                         var colors = ["red", "orange", "yellow", "green"];
-                        numbers.forEach(function(color){                      //  3
+                        numbers.forEach(function(color) {                     //  3
                           if(color % 3 === 0) {                               //  6
                             console.log(color);                               //  9
                           }
@@ -138,7 +140,7 @@ Arrays Exercises    //  Exercise 1 - What does the console.log print?
                   
                     //  Exercise 5 - Write a function printReverse() that takes an array as an argument
                     //  and prints out the elements in the array in reverse order
-                    //  Hint: Don't actually reverse the array itself. Use a loop
+                    //  Hint: Don't actually reverse the array itself. Use a loop.
                         function printReverse(arr) {
                           for(var i = arr.length - 1; i >= 0; i--) {
                             console.log(arr[i]);
